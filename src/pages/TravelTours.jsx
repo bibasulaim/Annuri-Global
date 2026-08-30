@@ -1,109 +1,118 @@
-import { Link } from 'react-router-dom'
-
-const travelServices = [
-  {
-    icon: '✈️',
-    title: 'Flight Assistance',
-    text: 'Get support with finding suitable flight options and planning your journey.',
-  },
-  {
-    icon: '🏨',
-    title: 'Hotel & Accommodation',
-    text: 'Find accommodation options that match your destination, budget and travel plans.',
-  },
-  {
-    icon: '🌍',
-    title: 'Tour Planning',
-    text: 'Plan memorable trips with destinations, activities and experiences tailored to you.',
-  },
-  {
-    icon: '📄',
-    title: 'Travel Documentation',
-    text: 'Guidance and support with preparing the documents needed for your journey.',
-  },
-  {
-    icon: '🧳',
-    title: 'Travel Consultation',
-    text: 'Get practical guidance before you travel so you can prepare with confidence.',
-  },
-  {
-    icon: '🚐',
-    title: 'Transfers & Support',
-    text: 'Explore options for airport transfers and other travel-related support.',
-  },
-]
-
 function TravelTours() {
+  const services = [
+    {
+      icon: '✈️',
+      title: 'Flight Support',
+      text: 'Get practical assistance when planning and preparing for your journey.',
+    },
+    {
+      icon: '🗺️',
+      title: 'Tours & Trips',
+      text: 'Explore travel experiences and trip-planning support for local and international journeys.',
+    },
+    {
+      icon: '🛂',
+      title: 'Travel Guidance',
+      text: 'Understand important travel requirements and plan your next steps with greater clarity.',
+    },
+    {
+      icon: '🕌',
+      title: 'Umrah Support',
+      text: 'Get guidance on Umrah planning, requirements and travel arrangements.',
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-[#FAF8F1] text-[#17231F]">
-
       {/* Hero */}
-      <section className="bg-[#0B5D4B] text-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
-          <Link
-            to="/"
-            className="mb-8 inline-block text-sm font-semibold text-[#C9A227]"
-          >
-            ← Back to Annuri Global Services
-          </Link>
+      <section className="relative overflow-hidden bg-[#0B5D4B] text-white">
+        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#C9A227]/20 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
 
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+          <a
+            href="/"
+            className="text-sm font-medium text-white/70 transition hover:text-[#C9A227]"
+          >
+            ← Back to Annuri
+          </a>
+
+          <p className="mt-10 font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
+            Annuri Travel & Tours
+          </p>
+
+          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            Your journey starts with a better plan.
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
+            Travel planning, tours and practical support designed to help you
+            move confidently from where you are to where you want to go.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/contact"
+              className="rounded-full bg-[#C9A227] px-7 py-3.5 font-bold text-white transition hover:bg-[#b18d20]"
+            >
+              Plan Your Journey
+            </a>
+
+            <a
+              href="#services"
+              className="rounded-full border border-white/30 px-7 py-3.5 font-semibold text-white transition hover:bg-white/10"
+            >
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-5 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
-                Annuri Travel & Tours
+                Travel Made Clearer
               </p>
 
-              <h1 className="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-                Your journey starts here.
-              </h1>
+              <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+                From planning to departure, know your next step.
+              </h2>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/75">
-                From planning your trip to getting ready for departure,
-                Annuri Travel & Tours provides practical support for journeys
-                across borders.
+              <p className="mt-6 leading-8 text-gray-600">
+                Whether you are travelling for business, leisure, religious
+                purposes or a new experience, good preparation can make the
+                journey smoother.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#travel-services"
-                  className="rounded-full bg-[#C9A227] px-7 py-3.5 font-bold text-white"
-                >
-                  Explore Services
-                </a>
-
-                <a
-                  href="#travel-contact"
-                  className="rounded-full border border-white/40 px-7 py-3.5 font-semibold text-white"
-                >
-                  Talk to Us
-                </a>
-              </div>
+              <p className="mt-4 leading-8 text-gray-600">
+                Annuri provides practical travel support while helping you
+                understand your options before you commit.
+              </p>
             </div>
 
-            <div className="relative">
-              <div className="rounded-[2rem] border border-white/10 bg-white/10 p-8 backdrop-blur">
-                <div className="text-7xl">✈️</div>
-
-                <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
-                  Travel • Explore • Experience
-                </p>
-
-                <h2 className="mt-3 text-3xl font-bold">
-                  Go further with confidence.
-                </h2>
-
-                <p className="mt-4 leading-7 text-white/70">
-                  Let us help you organise the important details while you
-                  focus on the journey ahead.
-                </p>
+            <div className="rounded-[2rem] bg-white p-8 shadow-xl ring-1 ring-[#E8F0EC] lg:p-10">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#E8F0EC] text-4xl">
+                🌍
               </div>
+
+              <h3 className="mt-7 text-2xl font-bold text-[#0B5D4B]">
+                Travel with confidence.
+              </h3>
+
+              <p className="mt-4 leading-7 text-gray-600">
+                Clear information, thoughtful planning and responsive support
+                can make a big difference before you set off.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section id="travel-services" className="py-20">
+      <section id="services" className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className="font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
@@ -111,19 +120,15 @@ function TravelTours() {
             </p>
 
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              Travel support, all in one place
+              Travel support built around your journey
             </h2>
-
-            <p className="mt-4 text-gray-600">
-              Practical services designed to make your travel planning easier.
-            </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {travelServices.map((service) => (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl border border-[#E8F0EC] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                className="rounded-2xl border border-[#E8F0EC] bg-[#FAF8F1] p-7 transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="text-4xl">{service.icon}</div>
 
@@ -131,66 +136,47 @@ function TravelTours() {
                   {service.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-gray-600">
+                <p className="mt-3 text-sm leading-7 text-gray-600">
                   {service.text}
                 </p>
-
-                <a
-                  href="#travel-contact"
-                  className="mt-5 inline-block text-sm font-bold text-[#0B5D4B]"
-                >
-                  Learn more →
-                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Destinations */}
-      <section className="bg-white py-20">
+      {/* Travel types */}
+      <section className="py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
-                Where Will You Go?
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl bg-[#0B5D4B] p-8 text-white">
+              <p className="text-4xl">🌍</p>
+              <h3 className="mt-6 text-xl font-bold">International Travel</h3>
+              <p className="mt-3 leading-7 text-white/70">
+                Planning to travel beyond Nigeria? Start with the right
+                information and preparation.
               </p>
-
-              <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-                From local journeys to international adventures.
-              </h2>
-
-              <p className="mt-5 leading-8 text-gray-600">
-                Whether you're travelling for business, leisure, family,
-                education or a new experience, we'll help you think through
-                the important details of your trip.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                {['Saudi Arabia', 'Oman', 'Morocco', 'Ghana', 'UAE', 'Turkey'].map(
-                  (destination) => (
-                    <span
-                      key={destination}
-                      className="rounded-full bg-[#E8F0EC] px-4 py-2 text-sm font-semibold text-[#0B5D4B]"
-                    >
-                      {destination}
-                    </span>
-                  )
-                )}
-              </div>
             </div>
 
-            <div className="rounded-[2rem] bg-[#E8F0EC] p-8 lg:p-12">
-              <div className="text-6xl">🌍</div>
-
-              <h3 className="mt-6 text-2xl font-bold text-[#0B5D4B]">
-                Travel with better preparation.
+            <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-[#E8F0EC]">
+              <p className="text-4xl">🚍</p>
+              <h3 className="mt-6 text-xl font-bold text-[#0B5D4B]">
+                Road Travel
               </h3>
+              <p className="mt-3 leading-7 text-gray-600">
+                Explore road travel options and trip support for destinations
+                within and beyond Nigeria.
+              </p>
+            </div>
 
-              <p className="mt-4 leading-7 text-gray-600">
-                Good travel starts long before you reach the airport. Our
-                goal is to help you understand your options and prepare
-                properly.
+            <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-[#E8F0EC]">
+              <p className="text-4xl">🕌</p>
+              <h3 className="mt-6 text-xl font-bold text-[#0B5D4B]">
+                Religious Travel
+              </h3>
+              <p className="mt-3 leading-7 text-gray-600">
+                Planning Umrah? Get started by understanding the requirements
+                and arrangements involved.
               </p>
             </div>
           </div>
@@ -198,40 +184,39 @@ function TravelTours() {
       </section>
 
       {/* CTA */}
-      <section id="travel-contact" className="bg-[#17231F] py-20 text-white">
+      <section className="bg-[#17231F] py-20 text-white">
         <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
           <p className="font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
-            Ready to Travel?
+            Ready When You Are
           </p>
 
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-            Let's start planning your journey.
+            Tell us where you're going.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-xl leading-7 text-white/65">
-            Tell us where you want to go and what you need help with.
-            We'll guide you through the next steps.
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/70">
+            Share your travel needs with us and let's discuss the best way to
+            move forward.
           </p>
 
           <a
-            href="mailto:annuriglobalservices@gmail.com"
-            className="mt-8 inline-block rounded-full bg-[#C9A227] px-8 py-4 font-bold text-white"
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-[#C9A227] px-8 py-3.5 font-bold text-white transition hover:bg-[#b18d20]"
           >
-            Email Annuri
+            Contact Annuri
           </a>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-[#0B5D4B] py-8 text-white">
-        <div className="mx-auto max-w-7xl px-5 text-center lg:px-8">
-          <p className="font-bold">ANNURI TRAVEL & TOURS</p>
-          <p className="mt-2 text-sm text-white/60">
-            A division of Annuri Global Services
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left lg:px-8">
+          <p className="font-bold">ANNURI GLOBAL SERVICES</p>
+          <p className="text-sm text-white/50">
+            Connecting you beyond borders.
           </p>
         </div>
       </footer>
-
     </div>
   )
 }

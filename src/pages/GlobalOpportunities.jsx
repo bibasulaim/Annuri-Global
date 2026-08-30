@@ -146,7 +146,8 @@ function GlobalOpportunities() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {categories.map((category) => (
-              <div
+              <Link
+                to="/contact"
                 key={category.title}
                 className="rounded-2xl border border-[#E8F0EC] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
@@ -159,7 +160,7 @@ function GlobalOpportunities() {
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   {category.text}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -208,16 +209,74 @@ function GlobalOpportunities() {
                   {opportunity.text}
                 </p>
 
-                <button
-                  type="button"
-                  className="mt-5 font-bold text-[#0B5D4B]"
+                <Link
+                  to="/contact"
+                  className="mt-5 inline-block font-bold text-[#0B5D4B] transition hover:text-[#C9A227]"
                 >
-                  View opportunities →
-                </button>
+                  Ask about opportunities →
+                </Link>
               </div>
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="bg-[#FAF8F1] py-20">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="font-semibold uppercase tracking-[0.2em] text-[#C9A227]">
+              How Annuri Helps
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+              Discover. Verify. Take the next step.
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              We aim to make opportunity discovery simpler while encouraging
+              applicants to verify every opportunity independently.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="text-3xl font-extrabold text-[#C9A227]">01</div>
+              <h3 className="mt-5 text-xl font-bold text-[#0B5D4B]">
+                Discover
+              </h3>
+              <p className="mt-3 leading-7 text-gray-600">
+                Find jobs, scholarships, programs and business opportunities
+                that match your interests.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="text-3xl font-extrabold text-[#C9A227]">02</div>
+              <h3 className="mt-5 text-xl font-bold text-[#0B5D4B]">
+                Verify
+              </h3>
+              <p className="mt-3 leading-7 text-gray-600">
+                Check the original source, eligibility requirements, deadlines
+                and application process before applying.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="text-3xl font-extrabold text-[#C9A227]">03</div>
+              <h3 className="mt-5 text-xl font-bold text-[#0B5D4B]">
+                Take Action
+              </h3>
+              <p className="mt-3 leading-7 text-gray-600">
+                Prepare your documents, follow the official instructions and
+                make informed decisions about your next step.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 

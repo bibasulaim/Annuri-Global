@@ -21,6 +21,11 @@ const services = [
     title: 'Consulting & Support',
     text: 'Practical guidance designed to help you make confident decisions.',
   },
+  {
+    icon: '🏠',
+    title: 'Real Estate',
+    text: 'Explore houses, land and property opportunities with practical support.',
+  },
 ]
 
 function App() {
@@ -53,6 +58,7 @@ function App() {
             <a href="/about" className="text-sm font-medium hover:text-[#0B5D4B]">About</a>
             <a href="/business-services" className="text-sm font-medium hover:text-[#0B5D4B]">Services</a>
             <a href="/global-opportunities" className="text-sm font-medium hover:text-[#0B5D4B]">Opportunities</a>
+            <a href="/real-estate" className="text-sm font-medium hover:text-[#0B5D4B]">Real Estate</a>
             <a href="/contact" className="rounded-full bg-[#0B5D4B] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#08483b]">
               Contact Us
             </a>
@@ -76,6 +82,7 @@ function App() {
               <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
               <a href="/business-services" onClick={() => setMenuOpen(false)}>Services</a>
               <a href="/global-opportunities" onClick={() => setMenuOpen(false)}>Opportunities</a>
+              <a href="/real-estate" onClick={() => setMenuOpen(false)}>Real Estate</a>
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
@@ -95,19 +102,20 @@ function App() {
             
             <div>
               <div className="mb-6 inline-flex rounded-full bg-[#E8F0EC] px-4 py-2 text-sm font-semibold text-[#0B5D4B]">
-                ✦ Connecting You Beyond Borders
+                ✦ TRAVEL • BUSINESS • OPPORTUNITIES • PROPERTY
               </div>
 
               <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                Your Gateway to
+                Connect. Explore.
                 <span className="block text-[#0B5D4B]">
-                  Global Opportunities
+                  Grow Beyond Borders.
                 </span>
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
-                Travel, business services and international opportunities
-                designed to connect you to a wider world.
+                Annuri Global Services helps individuals and businesses navigate
+                travel, opportunities, business support and property with clarity,
+                confidence and practical guidance.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -123,6 +131,12 @@ function App() {
                   className="rounded-full border-2 border-[#C9A227] px-7 py-3.5 font-semibold text-[#0B5D4B] transition hover:bg-[#C9A227] hover:text-white"
                 >
                   Contact Us
+                </a>
+                <a
+                  href="/real-estate"
+                  className="rounded-full border border-[#0B5D4B]/20 px-7 py-3.5 font-semibold text-[#0B5D4B] transition hover:bg-[#E8F0EC]"
+                >
+                  Explore Property
                 </a>
               </div>
             </div>
@@ -410,6 +424,57 @@ function App() {
                 </span>
               </a>
 
+              <a
+                href="/real-estate"
+                className="group rounded-2xl bg-[#FAF8F1] p-7 transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="text-4xl">🏠</div>
+                <h3 className="mt-5 text-lg font-bold text-[#0B5D4B]">
+                  Property & Land
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  Explore property opportunities and practical real-estate support.
+                </p>
+                <span className="mt-5 block text-sm font-bold text-[#C9A227]">
+                  Explore →
+                </span>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Trust Strip */}
+        <section className="border-y border-[#E8F0EC] bg-white py-10">
+          <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:grid-cols-3 lg:px-8">
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#E8F0EC] text-xl">
+                ✓
+              </div>
+              <div>
+                <p className="font-bold text-[#0B5D4B]">Clear Information</p>
+                <p className="text-sm text-gray-500">Know your options.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#E8F0EC] text-xl">
+                ✦
+              </div>
+              <div>
+                <p className="font-bold text-[#0B5D4B]">Practical Support</p>
+                <p className="text-sm text-gray-500">Guidance when it matters.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#E8F0EC] text-xl">
+                🤝
+              </div>
+              <div>
+                <p className="font-bold text-[#0B5D4B]">People First</p>
+                <p className="text-sm text-gray-500">Built around your needs.</p>
+              </div>
             </div>
           </div>
         </section>
