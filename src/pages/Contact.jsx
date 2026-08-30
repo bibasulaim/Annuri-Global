@@ -1,6 +1,35 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Contact() {
+  const [status, setStatus] = useState('idle')
+
+  async function handleSubmit(event) {
+    event.preventDefault()
+    setStatus('sending')
+
+    const form = event.currentTarget
+    const data = new FormData(form)
+
+    try {
+      const response = await fetch('https://formspree.io/f/mgaevjnv', {
+        method: 'POST',
+        body: data,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+
+      if (response.ok) {
+        form.reset()
+        setStatus('success')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
   return (
     <div className="min-h-screen bg-[#FAF8F1] text-[#17231F]">
 
@@ -116,7 +145,7 @@ function Contact() {
 
           <form
             className="mt-12 space-y-6 rounded-3xl bg-[#FAF8F1] p-7 lg:p-10"
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={handleSubmit}
           >
 
             <div className="grid gap-6 sm:grid-cols-2">
@@ -128,7 +157,9 @@ function Contact() {
 
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
+                  required
                   className="mt-2 w-full rounded-xl border border-[#DDE8E2] bg-white px-4 py-3 outline-none focus:border-[#0B5D4B]"
                 />
               </div>
@@ -140,7 +171,9 @@ function Contact() {
 
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Your phone number"
+                  required
                   className="mt-2 w-full rounded-xl border border-[#DDE8E2] bg-white px-4 py-3 outline-none focus:border-[#0B5D4B]"
                 />
               </div>
@@ -153,6 +186,8 @@ function Contact() {
               </label>
 
               <select
+                name="service"
+                required
                 className="mt-2 w-full rounded-xl border border-[#DDE8E2] bg-white px-4 py-3 outline-none focus:border-[#0B5D4B]"
                 defaultValue=""
               >
@@ -173,18 +208,33 @@ function Contact() {
               </label>
 
               <textarea
+                name="message"
                 rows="6"
                 placeholder="Tell us what you need..."
+                required
                 className="mt-2 w-full rounded-xl border border-[#DDE8E2] bg-white px-4 py-3 outline-none focus:border-[#0B5D4B]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full rounded-full bg-[#0B5D4B] px-7 py-4 font-bold text-white transition hover:bg-[#08483b]"
+              disabled={status === 'sending'}
+              className="w-full rounded-full bg-[#0B5D4B] px-7 py-4 font-bold text-white transition hover:bg-[#08483b] disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Send Enquiry
+              {status === 'sending' ? 'Sending...' : 'Send Enquiry'}
             </button>
+
+            {status === 'success' && (
+              <div className="rounded-xl bg-[#E8F0EC] p-4 text-center font-semibold text-[#0B5D4B]">
+                ✓ Thank you! Your enquiry has been received. We'll get back to you soon.
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-center font-semibold text-red-700">
+                Something went wrong. Please try again or email us directly.
+              </div>
+            )}
 
           </form>
 
