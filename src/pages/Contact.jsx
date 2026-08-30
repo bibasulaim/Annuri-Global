@@ -86,29 +86,13 @@ function Contact() {
             </div>
 
             <div className="rounded-2xl bg-white p-7 shadow-sm">
-              <div className="text-4xl">📧</div>
-              <h2 className="mt-5 text-xl font-bold text-[#0B5D4B]">
-                Email
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-gray-600">
-                Send a detailed enquiry and we'll get back to you.
-              </p>
-
-              <a
-                href="mailto:annuriglobalservices@gmail.com"
-                className="mt-5 inline-block font-semibold text-[#0B5D4B] hover:underline"
-              >
-                annuriglobalservices@gmail.com →
-              </a>
-            </div>
-
-            <div className="rounded-2xl bg-white p-7 shadow-sm">
               <div className="text-4xl">🌍</div>
               <h2 className="mt-5 text-xl font-bold text-[#0B5D4B]">
                 Our Services
               </h2>
               <p className="mt-3 text-sm leading-6 text-gray-600">
-                Travel, opportunities and business support under one brand.
+                Travel, opportunities, business support and property services
+                under one brand.
               </p>
 
               <Link
@@ -119,13 +103,30 @@ function Contact() {
               </Link>
             </div>
 
+            <div className="rounded-2xl bg-white p-7 shadow-sm">
+              <div className="text-4xl">✦</div>
+              <h2 className="mt-5 text-xl font-bold text-[#0B5D4B]">
+                Start Your Enquiry
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                Tell us what you need and our team will review your enquiry.
+              </p>
+
+              <a
+                href="#enquiry-form"
+                className="mt-5 inline-block font-bold text-[#0B5D4B]"
+              >
+                Send an enquiry →
+              </a>
+            </div>
+
           </div>
 
         </div>
       </section>
 
       {/* Form */}
-      <section className="bg-white py-20">
+      <section id="enquiry-form" className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-5 lg:px-8">
 
           <div className="text-center">
@@ -198,6 +199,7 @@ function Contact() {
                 <option>Global Opportunities</option>
                 <option>Business Services</option>
                 <option>Consulting & Support</option>
+                <option>Real Estate</option>
                 <option>Other</option>
               </select>
             </div>
