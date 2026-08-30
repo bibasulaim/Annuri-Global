@@ -84,7 +84,7 @@ function App() {
               <a href="/global-opportunities" onClick={() => setMenuOpen(false)}>Opportunities</a>
               <a href="/real-estate" onClick={() => setMenuOpen(false)}>Real Estate</a>
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="w-fit rounded-full bg-[#0B5D4B] px-5 py-2.5 font-semibold text-white"
               >
@@ -200,7 +200,9 @@ function App() {
                           ? "/business-services"
                           : service.title === "Consulting & Support"
                             ? "/consulting-support"
-                            : "#"
+                            : service.title === "Real Estate"
+                              ? "/real-estate"
+                              : "#"
                   }
                   className="rounded-2xl border border-[#E8F0EC] bg-[#FAF8F1] p-7 transition hover:-translate-y-1 hover:shadow-xl"
                 >
