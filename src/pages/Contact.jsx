@@ -138,8 +138,8 @@ function Contact() {
             </h2>
 
             <p className="mt-4 text-gray-600">
-              Fill in the details below. This form is currently for enquiry
-              collection and will be connected to our contact system later.
+              Fill in the details below and tell us how we can help. Your enquiry will be
+              sent directly to our team, and we’ll get back to you as soon as possible.
             </p>
           </div>
 
